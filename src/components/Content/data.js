@@ -1,7 +1,7 @@
 // import {} from '../../../public/IMG_1018.jpg'
 
 export const presentation = {
-  presentation: true,
+  // presentation: true,
   img: '/presentation.jpg',
   imgStart: false,
   imgWidth: '262',
@@ -10,4 +10,5 @@ export const presentation = {
   headline: 'Digiorgio Leonardo Simone',
   description: 'Web developer',
   buttonLabel: 'Get CV',
+  buttonColor: 'white',
 }

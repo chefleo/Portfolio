@@ -5,6 +5,7 @@ export const darkTheme = {
   contentColorInverted: '#E43F5A',
   textColor: 'white',
   textColorInverted: 'black',
+  buttonColor: '#01BF71',
 }
 
 export const lightTheme = {
@@ -14,4 +15,5 @@ export const lightTheme = {
   contentColorInverted: '#706c61',
   textColor: 'black',
   textColorInverted: 'white',
+  buttonColor: '#010606',
 }

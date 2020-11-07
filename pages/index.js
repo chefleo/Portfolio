@@ -7,11 +7,16 @@ import { presentation } from '../src/components/Content/data'
 
 export default function Home() {
   const [useDarkTheme, setUseDarkTheme] = useState(true)
+  const presentationBool = true
   return (
     <>
       <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
         <Navbar />
-        <Content {...presentation} />
+        <Content
+          title="aaaaa"
+          presentation={presentationBool}
+          {...presentation}
+        />
       </ThemeProvider>
     </>
   )

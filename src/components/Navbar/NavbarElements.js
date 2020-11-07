@@ -6,7 +6,7 @@ export const NavWrapper = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  height: 80px;
+  height: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,11 +16,11 @@ export const NavWrapper = styled.nav`
 export const NavContainer = styled.nav`
   /* background: orange; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
+  padding: 0 8px;
   max-width: 1100px;
 `
 
@@ -34,9 +34,14 @@ export const NavMenu = styled.ul`
   margin-right: -22px;
 `
 export const NavItem = styled.li`
-  /* background: green; */
-  padding: 0 3em;
-  height: 80px;
+  background-color: ${(props) => props.theme.navColor};
+  /* padding: 0 1em; */
+  height: 4em;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+  }
 `
 
 export const NavLinks = styled(LinkS)`

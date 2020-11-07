@@ -4,17 +4,47 @@ import Image from 'next/image'
 export const ContentContainer = styled.div`
   color: ${(props) => props.theme.textColor};
   background: ${(props) => props.theme.contentColor};
-
+  position: relative;
+  z-index: 0;
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
+`
+
+export const Layer1 = styled.div`
+  display: ${({ presentation }) => (presentation ? 'flex' : 'none')};
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+`
+
+export const Svg = styled.svg`
+  width: calc(119% + 1.3px);
+  height: 140px;
+  transform: rotateY(180deg);
+  fill: ${(props) => props.theme.navColor};
+`
+
+export const Title = styled.h1`
+  display: ${({ title }) => (title ? 'block' : 'none')};
+  margin: 0;
+  padding-bottom: 20px;
+
+  text-align: center;
+  color: ${(props) => props.theme.textColor};
+  text-transform: uppercase;
 `
 
 export const ContentWrapper = styled.div`
   /* background: red; */
   display: flex;
   z-index: 1;
-  height: 800px;
+  height: 600px;
   width: 100%;
   /* max-width: 1100px; */
   margin-right: auto;
@@ -31,11 +61,17 @@ export const ContentRow = styled.div`
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
-  /* @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
-  } */
+  @media screen and (max-width: 768px) {
+    /* grid-template-areas: 'col2' 'col1'; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 `
+// ${({ imgStart }) =>
+//       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
 
 export const Column1 = styled.div`
   /* background: green; */
@@ -46,6 +82,10 @@ export const Column1 = styled.div`
   text-align: center;
 
   grid-area: col1;
+
+  @media screen and (max-width: 768px) {
+    order: ${({ imgStart }) => (imgStart ? '1' : '2')};
+  }
 `
 
 export const Column2 = styled.div`
@@ -56,6 +96,10 @@ export const Column2 = styled.div`
   justify-content: flex-end;
   padding-right: 20px;
   grid-area: col2;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `
 
 export const TextWrapper = styled.div`
@@ -99,7 +143,8 @@ export const Subtitle = styled.p`
 
 export const BtnWrap = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  margin-top: 20px;
 `
 
 export const ImgWrap = styled.div`
