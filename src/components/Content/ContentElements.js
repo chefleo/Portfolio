@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { slideRight, slideBottom, slideLeft } from '../Animation'
 import Image from 'next/image'
 
 export const ContentContainer = styled.div`
@@ -24,27 +25,32 @@ export const Layer1 = styled.div`
 `
 
 export const Svg = styled.svg`
-  width: calc(119% + 1.3px);
-  height: 140px;
-  transform: rotateY(180deg);
-  fill: ${(props) => props.theme.navColor};
+  width: calc(121% + 1.3px);
+  height: 600px;
+  /* transform: rotateY(180deg); */
+  fill: ${(props) => props.theme.contentColor2};
+  /* filter: brightness(90%); */
 `
 
 export const Title = styled.h1`
   display: ${({ title }) => (title ? 'block' : 'none')};
   margin: 0;
-  padding-bottom: 20px;
+  padding: 50px;
+  background: green;
 
   text-align: center;
   color: ${(props) => props.theme.textColor};
   text-transform: uppercase;
+  /* text-decoration: underline; */
+  /* -webkit-animation: ${slideRight} 1s ease-out both;
+  animation: ${slideRight} 1s ease-out both; */
 `
 
 export const ContentWrapper = styled.div`
   /* background: red; */
   display: flex;
   z-index: 1;
-  height: 600px;
+  height: 710px;
   width: 100%;
   /* max-width: 1100px; */
   margin-right: auto;
@@ -93,7 +99,7 @@ export const Column2 = styled.div`
   /* margin-bottom: 15px;
   padding: 0 15px; */
   display: flex;
-  justify-content: flex-end;
+  justify-content: ${({ imgStart }) => (imgStart ? 'center' : 'flex-end')};
   padding-right: 20px;
   grid-area: col2;
 
@@ -128,6 +134,9 @@ export const Heading = styled.p`
   font-weight: 600;
   color: ${(props) => props.theme.textColor};
 
+  /* -webkit-animation: ${slideBottom} 1.8s ease-out 0.5s both;
+  animation: ${slideBottom} 1.8s ease-out 0.5s both; */
+
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
@@ -138,6 +147,8 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
+  /* -webkit-animation: ${slideLeft} 1.8s ease-out 0.8s both;
+  animation: ${slideLeft} 1.8s ease-out 0.8s both; */
   color: ${(props) => props.theme.textColor};
 `
 
@@ -145,6 +156,8 @@ export const BtnWrap = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  /* -webkit-animation: ${slideRight} 1.8s ease-out 0.8s both;
+  animation: ${slideRight} 1.8s ease-out 0.8s both; */
 `
 
 export const ImgWrap = styled.div`
