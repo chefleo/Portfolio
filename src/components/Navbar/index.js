@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { FaBars } from 'react-icons/fa'
+// import { FaMoon, FiSun } from 'react-icons/fa'
+import DarkModeToggle from 'react-dark-mode-toggle'
 import { IconContext } from 'react-icons/lib'
 import { animateScroll as scroll } from 'react-scroll'
 import {
@@ -8,22 +9,23 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavToggle,
 } from './NavbarElements'
 
-const Navbar = ({ toggle }) => {
-  //   const [scrollNav, setScrollNav] = useState(false)
+const Navbar = ({ toggle, isDarkMode }) => {
+  const [scrollNav, setScrollNav] = useState(false)
 
-  //   const changeNav = () => {
-  //     if (window.scrollY >= 80) {
-  //       setScrollNav(true)
-  //     } else {
-  //       setScrollNav(false)
-  //     }
-  //   }
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true)
+    } else {
+      setScrollNav(false)
+    }
+  }
 
-  //   useEffect(() => {
-  //     window.addEventListener('scroll', changeNav)
-  //   }, [])
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav)
+  }, [])
 
   //   const toggleHome = () => {
   //     scroll.scrollToTop()
@@ -33,22 +35,25 @@ const Navbar = ({ toggle }) => {
     <>
       <NavWrapper>
         <NavContainer>
+          <NavToggle>
+            <DarkModeToggle onChange={toggle} checked={isDarkMode} size={80} />
+          </NavToggle>
           <NavMenu>
             <NavItem>
               <NavLinks
-                to="discover"
+                to="projects"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}
+                offset={-60}
               >
                 Projects
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
-                to="discover"
+                to="articles"
                 smooth={true}
                 duration={500}
                 spy={true}
@@ -60,7 +65,7 @@ const Navbar = ({ toggle }) => {
             </NavItem>
             <NavItem>
               <NavLinks
-                to="discover"
+                to="social"
                 smooth={true}
                 duration={500}
                 spy={true}

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
+import DarkModeToggle from 'react-dark-mode-toggle'
 
 export const NavWrapper = styled.nav`
   background-color: ${(props) => props.theme.navColor};
@@ -17,12 +18,32 @@ export const NavContainer = styled.nav`
   /* background: orange; */
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   height: 100%;
   z-index: 1;
   width: 100%;
   padding: 0 8px;
   max-width: 1100px;
 `
+
+export const NavToggle = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: auto;
+`
+
+// export const NavNotch = styled.div`
+//   height: 20px;
+//   width: 20px;
+//   border-radius: 50%;
+//   background: blue;
+//   position: absolute;
+//   top: 5px;
+//   left: 5px;
+//   box-shadow: 0 0 5px yellow;
+// `
 
 export const NavMenu = styled.ul`
   /* background: yellow; */
@@ -46,7 +67,7 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(LinkS)`
   /* background: white; */
-  color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.navTextColor};
   display: flex;
   align-items: center;
   text-decoration: none;

@@ -33,42 +33,66 @@ const Content = ({
   buttonLabel,
   buttonColor,
   ImageAnim,
+  ImageAnimTime,
   titleAnim,
+  titleAnimTime,
   topLineAnim,
+  topLineAnimTime,
   headlineAnim,
+  headlineAnimTime,
+  headlineDelay,
   subtitleAnim,
+  subtitleAnimTime,
   buttonAnim,
+  buttonAnimTime,
+  alternativeColor,
+  isDarkMode,
 }) => {
   useEffect(() => {
-    Aos.init({ duration: 2000 })
+    Aos.init({})
   }, [])
 
   return (
     <>
-      <ContentContainer>
-        <Title title={title}>
-          <div data-aos={titleAnim}>{title}</div>
+      <ContentContainer alternativeColor={alternativeColor}>
+        <Title title={title} isDarkMode={isDarkMode}>
+          <div data-aos={titleAnim} data-aos-duration={titleAnimTime}>
+            {title}
+          </div>
         </Title>
         <ContentWrapper>
           <ContentRow imgStart={imgStart}>
             <Column1 imgStart={imgStart}>
               <TextWrapper>
-                <TopLine data-aos={topLineAnim}>{topLine}</TopLine>
+                <TopLine
+                  data-aos={topLineAnim}
+                  data-aos-duration={topLineAnimTime}
+                >
+                  {topLine}
+                </TopLine>
                 <Heading
                   data-aos={headlineAnim}
-                  data-aos-duration="2000"
-                  // data-aos-delay="300"
+                  data-aos-duration={headlineAnimTime}
+                  data-aos-delay={headlineDelay}
                 >
                   {headline}
                 </Heading>
-                <Subtitle data-aos={subtitleAnim}>{subtitle}</Subtitle>
-                <BtnWrap data-aos={buttonAnim}>
+                <Subtitle
+                  data-aos={subtitleAnim}
+                  data-aos-duration={subtitleAnimTime}
+                >
+                  {subtitle}
+                </Subtitle>
+                <BtnWrap
+                  data-aos={buttonAnim}
+                  data-aos-duration={buttonAnimTime}
+                >
                   <Button buttonColor={buttonColor}>{buttonLabel}</Button>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
             <Column2 imgStart={imgStart}>
-              <ImgWrap data-aos={ImageAnim}>
+              <ImgWrap data-aos={ImageAnim} data-aos-duration={ImageAnimTime}>
                 <ImageComp
                   presentation={presentation}
                   src={img}
@@ -82,6 +106,7 @@ const Content = ({
         </ContentWrapper>
         <Layer1 presentation={presentation}>
           <Svg
+            isDarkMode={isDarkMode}
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 120"

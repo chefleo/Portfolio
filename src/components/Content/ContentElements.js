@@ -4,7 +4,10 @@ import Image from 'next/image'
 
 export const ContentContainer = styled.div`
   color: ${(props) => props.theme.textColor};
-  background: ${(props) => props.theme.contentColor};
+  background: ${(props) => ({ alternativeColor }) =>
+    alternativeColor
+      ? props.theme.contentColorAlternative
+      : props.theme.contentColor};
   position: relative;
   z-index: 0;
   @media screen and (max-width: 768px) {
@@ -28,18 +31,24 @@ export const Svg = styled.svg`
   width: calc(121% + 1.3px);
   height: 600px;
   /* transform: rotateY(180deg); */
-  fill: ${(props) => props.theme.contentColor2};
-  /* filter: brightness(90%); */
+  fill: ${(props) => props.theme.contentColor};
+  filter: ${({ isDarkMode }) =>
+    isDarkMode ? 'brightness(80%)' : 'brightness(100%)'};
 `
 
 export const Title = styled.h1`
   display: ${({ title }) => (title ? 'block' : 'none')};
   margin: 0;
-  padding: 50px;
-  background: green;
+  padding: 40px;
+  background: ${(props) => props.theme.contentTitle};
 
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: bold;
   text-align: center;
-  color: ${(props) => props.theme.textColor};
+  color: ${(props) => ({ isDarkMode }) =>
+    isDarkMode ? props.theme.textColor : props.theme.navTextColor};
   text-transform: uppercase;
   /* text-decoration: underline; */
   /* -webkit-animation: ${slideRight} 1s ease-out both;
