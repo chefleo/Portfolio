@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
-import DarkModeToggle from 'react-dark-mode-toggle'
 
 export const NavWrapper = styled.nav`
   background-color: ${(props) => props.theme.navColor};
@@ -34,16 +33,20 @@ export const NavToggle = styled.div`
   margin-right: auto;
 `
 
-// export const NavNotch = styled.div`
-//   height: 20px;
-//   width: 20px;
-//   border-radius: 50%;
-//   background: blue;
-//   position: absolute;
-//   top: 5px;
-//   left: 5px;
-//   box-shadow: 0 0 5px yellow;
-// `
+export const MobileIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+  }
+`
 
 export const NavMenu = styled.ul`
   /* background: yellow; */
@@ -53,15 +56,50 @@ export const NavMenu = styled.ul`
   text-align: center;
   padding: 2px;
   margin-right: -22px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
 export const NavItem = styled.li`
   background-color: ${(props) => props.theme.navColor};
   /* padding: 0 1em; */
   height: 4em;
 
-  &:hover {
-    transform: scale(1.1);
-    filter: brightness(120%);
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  /* background: #e1e1e1; */
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${(props) => props.theme.navHover};
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(1);
+    filter: brightness(110%);
+    color: white;
   }
 `
 
@@ -77,6 +115,6 @@ export const NavLinks = styled(LinkS)`
   /* border: 3px solid blue; */
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid ${(props) => props.theme.topLineColor};
   }
 `

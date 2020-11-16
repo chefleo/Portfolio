@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
+import Image from 'next/image'
+import { When } from 'react-if'
 import { Button } from '../ButtonElement'
+import download from 'downloadjs'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import {
   ContentContainer,
   Title,
+  TitleContainer,
   ContentWrapper,
   ContentRow,
   Column1,
@@ -43,8 +47,10 @@ const Content = ({
   headlineDelay,
   subtitleAnim,
   subtitleAnimTime,
+  subtitleDelay,
   buttonAnim,
   buttonAnimTime,
+  url,
   alternativeColor,
   isDarkMode,
 }) => {
@@ -52,14 +58,49 @@ const Content = ({
     Aos.init({})
   }, [])
 
+  const clickHandle = () => {
+    window.open(url, '_blank')
+  }
+
   return (
     <>
       <ContentContainer alternativeColor={alternativeColor}>
-        <Title title={title} isDarkMode={isDarkMode}>
-          <div data-aos={titleAnim} data-aos-duration={titleAnimTime}>
-            {title}
-          </div>
-        </Title>
+        {/* <Image
+          src="/presentation.jpg"
+          alt="Picture of the author"
+          width={1000}
+          height={1000}
+        /> */}
+        {/* <ContentWrapper>
+          <Column2 imgStart={imgStart} presentation={presentation}>
+            <ImgWrap>
+              <ImageComp
+                presentation={presentation}
+                src={img}
+                alt="Picture of the author"
+                layout="responsive"
+                width={imgWidth}
+                height={imgHeight}
+              />
+            </ImgWrap>
+          </Column2>
+          <TitleContainer title={title}>
+            <Title isDarkMode={isDarkMode}>
+              <div data-aos={titleAnim} data-aos-duration={titleAnimTime}>
+                {title}
+              </div>
+            </Title>
+          </TitleContainer>
+        </ContentWrapper> */}
+
+        <TitleContainer title={title}>
+          <Title isDarkMode={isDarkMode}>
+            <div data-aos={titleAnim} data-aos-duration={titleAnimTime}>
+              {title}
+            </div>
+          </Title>
+        </TitleContainer>
+
         <ContentWrapper>
           <ContentRow imgStart={imgStart}>
             <Column1 imgStart={imgStart}>
@@ -80,44 +121,51 @@ const Content = ({
                 <Subtitle
                   data-aos={subtitleAnim}
                   data-aos-duration={subtitleAnimTime}
+                  data-aos-delay={subtitleDelay}
                 >
                   {subtitle}
                 </Subtitle>
                 <BtnWrap
+                  presentation={presentation}
                   data-aos={buttonAnim}
                   data-aos-duration={buttonAnimTime}
                 >
-                  <Button buttonColor={buttonColor}>{buttonLabel}</Button>
+                  <Button buttonColor={buttonColor} onClick={clickHandle}>
+                    {buttonLabel}
+                  </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
-            <Column2 imgStart={imgStart}>
-              <ImgWrap data-aos={ImageAnim} data-aos-duration={ImageAnimTime}>
-                <ImageComp
-                  presentation={presentation}
-                  src={img}
-                  alt="Picture of the author"
-                  width={imgWidth}
-                  height={imgHeight}
-                />
-              </ImgWrap>
+            <Column2 imgStart={imgStart} presentation={presentation}>
+              <ImageComp
+                data-aos={ImageAnim}
+                data-aos-duration={ImageAnimTime}
+                presentation={presentation}
+                src={img}
+                alt="Picture of the author"
+                layout="responsive"
+                width={imgWidth}
+                height={imgHeight}
+              />
             </Column2>
           </ContentRow>
         </ContentWrapper>
-        <Layer1 presentation={presentation}>
-          <Svg
-            isDarkMode={isDarkMode}
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-          </Svg>
-        </Layer1>
+        <When condition={presentation}>
+          <Layer1 presentation={presentation}>
+            <Svg
+              isDarkMode={isDarkMode}
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"
+              ></path>
+            </Svg>
+          </Layer1>
+        </When>
       </ContentContainer>
     </>
   )

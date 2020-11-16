@@ -1,9 +1,11 @@
 export const darkTheme = {
   navColor: '#000000',
   navTextColor: '#ffffff',
+  navHover: '#333333',
   contentColor: '#181818',
   contentColorAlternative: '#1a1c20',
   contentTitle: '#17462e',
+  topLineColor: '#01bf71',
   contentColorInverted: '#E43F5A',
   textColor: 'white',
   textColorInverted: 'black',
@@ -11,11 +13,13 @@ export const darkTheme = {
 }
 
 export const lightTheme = {
-  navColor: '#e8ead3',
+  navColor: '#ff971d',
   navTextColor: '#000000',
+  navHover: '#ffcd91',
   contentColor: '#ffffff',
   contentColorAlternative: '#ffffff',
-  contentTitle: '#ff9f68',
+  contentTitle: '#ffe8d6',
+  topLineColor: '#cb3737',
   contentColorInverted: '#706c61',
   textColor: 'black',
   textColorInverted: 'white',

@@ -28,60 +28,24 @@ export const presentation = {
   subtitle: 'Web developer',
   subtitleAnim: 'fade',
   subtitleAnimTime: '2000',
+  subtitleDelay: '500',
 
   //Button
-  buttonLabel: 'Get CV',
-  buttonAnim: 'fade',
-  buttonAnimTime: '2000',
-  buttonColor: 'white',
+  // buttonLabel: 'Get CV',
+  // buttonAnim: 'fade',
+  // buttonAnimTime: '2000',
+  // buttonColor: 'white',
+  // url: 'public/presentation.jpg',
 
   alternativeColor: false,
 }
 
-export const test = {
+export const Portfolio = {
   // Image
-  img: '/test.svg',
+  img: '/portfolio.png',
   imgStart: true,
-  imgWidth: '262',
-  imgHeight: '300',
-  ImageAnim: 'fade-up',
-  ImageAnimTime: '',
-
-  // Title
-  titleAnim: 'fade-right',
-  titleAnimTime: '2000',
-
-  //TopLine
-  topLine: 'React App',
-  topLineAnim: 'fade-right',
-  topLineAnimTime: '2000',
-
-  //HeadLine
-  headline: 'Digiorgio Leonardo Simone',
-  headlineAnim: 'fade-left',
-  headlineAnimTime: '1500',
-  headlineDelay: '1000',
-
-  //SubTitle
-  subtitle: 'Web developer',
-  subtitleAnim: 'fade',
-  subtitleAnimTime: '2000',
-
-  //Button
-  buttonLabel: 'Get CV',
-  buttonAnim: 'flip-right',
-  buttonAnimTime: '2000',
-  buttonColor: 'white',
-
-  alternativeColor: true,
-}
-
-export const test2 = {
-  // Image
-  img: '/test.svg',
-  imgStart: false,
-  imgWidth: '262',
-  imgHeight: '300',
+  imgWidth: '500',
+  imgHeight: '281',
   ImageAnim: 'fade-up',
   ImageAnimTime: '2000',
 
@@ -90,25 +54,107 @@ export const test2 = {
   titleAnimTime: '2000',
 
   //TopLine
-  topLine: 'React App',
+  topLine: 'React / Next.js',
+  topLineAnim: 'fade-right',
+  topLineAnimTime: '2000',
+
+  //HeadLine
+  headline: 'Portfolio',
+  headlineAnim: 'fade-left',
+  headlineAnimTime: '1500',
+  headlineDelay: '1000',
+
+  //SubTitle
+  subtitle: 'Portfoglio created with react and next.js',
+  subtitleAnim: 'fade',
+  subtitleAnimTime: '2000',
+  subtitleDelay: '500',
+
+  //Button
+  buttonLabel: 'View Code',
+  buttonAnim: 'flip-right',
+  buttonAnimTime: '2000',
+  buttonColor: 'white',
+  url: 'https://github.com/chefleo/Portfolio.git',
+
+  alternativeColor: true,
+}
+
+export const Starchef = {
+  // Image
+  img: '/Starchef.png',
+  imgStart: false,
+  imgWidth: '500',
+  imgHeight: '281',
+  ImageAnim: 'fade-up',
+  ImageAnimTime: '2000',
+
+  // Title
+  titleAnim: 'fade-right',
+  titleAnimTime: '2000',
+
+  //TopLine
+  topLine: 'MongoDB / Express / Angular / Nodejs',
   topLineAnim: 'fade-right',
   topLineAnimTime: '2000',
 
   //Headline
-  headline: 'Digiorgio Leonardo Simone',
+  headline: 'StarChef',
   headlineAnim: 'fade-left',
   headlineAnimTime: '1500',
 
   //Subtitle
-  subtitle: 'Web developer',
+  subtitle: 'An ecommerce about the kitchen world',
   subtitleAnim: 'fade',
   subtitleAnimTime: '2000',
+  subtitleDelay: '500',
 
   //Button
-  buttonLabel: 'Get CV',
+  buttonLabel: 'View Code',
   buttonAnim: 'flip-right',
   buttonAnimTime: '2000',
   buttonColor: 'white',
+  url: 'https://github.com/chefleo/StarChef',
+
+  alternativeColor: false,
+}
+
+export const Libra = {
+  // Image
+  img: '/libra.png',
+  imgStart: false,
+  imgWidth: '400',
+  imgHeight: '400',
+  ImageAnim: 'fade-up',
+  ImageAnimTime: '2000',
+
+  // Title
+  titleAnim: 'fade-right',
+  titleAnimTime: '2000',
+
+  //TopLine
+  topLine: 'Cryptocurrency',
+  topLineAnim: 'fade-right',
+  topLineAnimTime: '2000',
+
+  //Headline
+  headline: 'Libra',
+  headlineAnim: 'fade-left',
+  headlineAnimTime: '1500',
+
+  //Subtitle
+  subtitle: 'Thesis on Libra cryptocurrency (Italian)',
+  subtitleAnim: 'fade',
+  subtitleAnimTime: '2000',
+  subtitleDelay: '500',
+
+  //Button
+  buttonLabel: 'View Article',
+  buttonAnim: 'flip-right',
+  buttonAnimTime: '2000',
+  buttonColor: 'white',
+  url:
+    'https://medium.com/@simon.digiorgio/la-blockchain-di-libra-e8b1e243fcbd',
 
   alternativeColor: false,
 }
