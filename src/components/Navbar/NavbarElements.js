@@ -3,7 +3,9 @@ import { Link as LinkS } from 'react-scroll'
 
 export const NavWrapper = styled.nav`
   background-color: ${(props) => props.theme.navColor};
+  width: 100%;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   z-index: 10;
   height: 4em;

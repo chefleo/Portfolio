@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import Navbar from '../src/components/Navbar'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme } from '../src/theme/theme'
-import Content from '../src/components/Content'
 import {
   presentation,
   Portfolio,
   Starchef,
   Libra,
 } from '../src/components/Content/data'
+
+import Navbar from '../src/components/Navbar'
+import Content from '../src/components/Content'
+import Sidebar from '../src/components/Sidebar'
 
 export default function Home() {
   const [useDarkTheme, setUseDarkTheme] = useState(true)
@@ -28,6 +29,7 @@ export default function Home() {
   return (
     <>
       <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
+        <Sidebar isOpen={isOpen} toggle={open} />
         <Navbar toggle={toggle} open={open} isDarkMode={isDarkMode} />
         <Content
           presentation="true"

@@ -10,6 +10,8 @@ export const ContentContainer = styled.div`
       : props.theme.contentColor};
   position: relative;
   z-index: 0;
+  width: 100%;
+  overflow-x: hidden;
 `
 
 export const ContentWrapper = styled.div`
