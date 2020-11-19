@@ -23,7 +23,7 @@ export const NavContainer = styled.nav`
   height: 100%;
   z-index: 1;
   width: 100%;
-  padding: 0 8px;
+  padding: 0 30px;
   max-width: 1100px;
 `
 

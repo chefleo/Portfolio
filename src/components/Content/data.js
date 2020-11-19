@@ -123,8 +123,8 @@ export const Libra = {
   // Image
   img: '/libra.png',
   imgStart: false,
-  imgWidth: '400',
-  imgHeight: '400',
+  imgWidth: '300',
+  imgHeight: '300',
   ImageAnim: 'fade-up',
   ImageAnimTime: '2000',
 

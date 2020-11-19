@@ -37,9 +37,9 @@ export const ContentRow = styled.div`
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
   grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2 col1'` : `'col1 col2'`};
+    imgStart ? `'col2 col2  col1 col1'` : `'col1 col1 col2 col2 '`};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 850px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,10 +54,11 @@ export const Column1 = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  /* margin: ${({ imgStart }) => (imgStart ? '0 0 0 40px' : '0 40px 0 0')}; */
 
   grid-area: col1;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 850px) {
     order: ${({ imgStart }) => (imgStart ? '1' : '2')};
   }
 
@@ -69,8 +70,9 @@ export const Column1 = styled.div`
 export const Column2 = styled.div`
   /* background: green; */
   /* height: inherit; */
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* margin: ${({ imgStart }) => (imgStart ? '0 40px 0 0' : '0 0 0 40px')}; */
   margin-bottom: 15px;
   margin-top: 25px;
   padding: 0 15px;
@@ -79,10 +81,10 @@ export const Column2 = styled.div`
     presentation ? 'flex-end' : 'center'};
   grid-area: col2;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 850px) {
     justify-content: center;
     align-items: center;
-    height: 75%;
+    /* height: 75%; */
     /* max-height: 300px; */
   }
 `
