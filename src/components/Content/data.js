@@ -1,5 +1,3 @@
-// import {} from '../../../public/IMG_1018.jpg'
-
 export const presentation = {
   // Image
   img: '/presentation.jpg',
@@ -29,13 +27,6 @@ export const presentation = {
   subtitleAnim: 'fade',
   subtitleAnimTime: '2000',
   subtitleDelay: '500',
-
-  //Button
-  // buttonLabel: 'Get CV',
-  // buttonAnim: 'fade',
-  // buttonAnimTime: '2000',
-  // buttonColor: 'white',
-  // url: 'public/presentation.jpg',
 
   alternativeColor: false,
 }
