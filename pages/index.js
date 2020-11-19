@@ -11,6 +11,7 @@ import {
 import Navbar from '../src/components/Navbar'
 import Content from '../src/components/Content'
 import Sidebar from '../src/components/Sidebar'
+import Footer from '../src/components/Footer'
 
 export default function Home() {
   const [useDarkTheme, setUseDarkTheme] = useState(true)
@@ -42,6 +43,9 @@ export default function Home() {
         </section>
         <section id="articles">
           <Content title="Articles" {...Libra} />
+        </section>
+        <section id="social">
+          <Footer id="social" />
         </section>
       </ThemeProvider>
     </>

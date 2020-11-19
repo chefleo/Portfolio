@@ -67,7 +67,7 @@ const Navbar = ({ toggle, isDarkMode, open }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={-60}
                 >
                   Articles
                 </NavLinks>

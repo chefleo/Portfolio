@@ -10,6 +10,9 @@ export const darkTheme = {
   textColor: 'white',
   textColorInverted: 'black',
   buttonColor: '#01BF71',
+  footerBg: '#000000',
+  footerIcon: '#333333',
+  footerText: '#ffffff',
 }
 
 export const lightTheme = {
@@ -24,4 +27,7 @@ export const lightTheme = {
   textColor: 'black',
   textColorInverted: 'white',
   buttonColor: '#010606',
+  footerBg: '#000000',
+  footerIcon: '#333333',
+  footerText: '#ffffff',
 }
