@@ -2,7 +2,7 @@ export const presentation = {
   // Image
   img: '/presentation.jpg',
   imgStart: false,
-  imgWidth: '262',
+  imgWidth: '300',
   imgHeight: '300',
   ImageAnim: 'fade-up',
   ImageAnimTime: '2000',
