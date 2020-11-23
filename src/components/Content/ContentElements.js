@@ -45,6 +45,7 @@ export const ContentRow = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
   }
 `
 // ${({ imgStart }) =>
@@ -70,7 +71,7 @@ export const Column1 = styled.div`
 export const Column2 = styled.div`
   /* background: green; */
   /* height: inherit; */
-  /* width: 100%; */
+  width: 100%;
   /* height: 100%; */
   /* margin: ${({ imgStart }) => (imgStart ? '0 40px 0 0' : '0 0 0 40px')}; */
   margin-bottom: 15px;

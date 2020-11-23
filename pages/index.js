@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import dynamic from 'next/dynamic'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme } from '../src/theme/theme'
 import {
@@ -9,7 +10,10 @@ import {
 } from '../src/components/Content/data'
 
 import Navbar from '../src/components/Navbar'
-import Content from '../src/components/Content'
+const Content = dynamic(() => import('../src/components/Content'), {
+  loading: () => <p>...</p>,
+})
+// import Content from '../src/components/Content'
 import Sidebar from '../src/components/Sidebar'
 import Footer from '../src/components/Footer'
 
