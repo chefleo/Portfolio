@@ -4,8 +4,8 @@ export const presentation = {
   imgStart: false,
   imgWidth: '300',
   imgHeight: '300',
-  ImageAnim: 'fade-up',
-  ImageAnimTime: '2000',
+  ImageAnim: '',
+  ImageAnimTime: '',
 
   // Title
   titleAnim: 'fade-right',

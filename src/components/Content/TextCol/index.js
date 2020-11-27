@@ -1,8 +1,6 @@
 import React from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import { Button } from '../../ButtonElement'
-
+import { When } from 'react-if'
 import {
   TextWrapper,
   TopLine,
@@ -33,9 +31,11 @@ const TextComponent = ({
   return (
     <>
       <TextWrapper>
-        <TopLine data-aos={topLineAnim} data-aos-duration={topLineAnimTime}>
-          {topLine}
-        </TopLine>
+        <When condition={!presentation}>
+          <TopLine data-aos={topLineAnim} data-aos-duration={topLineAnimTime}>
+            {topLine}
+          </TopLine>
+        </When>
         <Heading
           data-aos={headlineAnim}
           data-aos-duration={headlineAnimTime}
@@ -50,15 +50,17 @@ const TextComponent = ({
         >
           {subtitle}
         </Subtitle>
-        <BtnWrap
-          presentation={presentation}
-          data-aos={buttonAnim}
-          data-aos-duration={buttonAnimTime}
-        >
-          <Button buttonColor={buttonColor} onClick={clickHandle}>
-            {buttonLabel}
-          </Button>
-        </BtnWrap>
+        <When condition={!presentation}>
+          <BtnWrap
+            presentation={presentation}
+            data-aos={buttonAnim}
+            data-aos-duration={buttonAnimTime}
+          >
+            <Button buttonColor={buttonColor} onClick={clickHandle}>
+              {buttonLabel}
+            </Button>
+          </BtnWrap>
+        </When>
       </TextWrapper>
     </>
   )

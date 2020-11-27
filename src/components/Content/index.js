@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { When } from 'react-if'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import TitleComponent from './Title/index'
 import TextComponent from './TextCol/index'
 import SvgComponent from './SvgComponent/index'
@@ -47,8 +45,10 @@ const Content = ({
   alternativeColor,
   isDarkMode,
 }) => {
+  const [isNotRender, setRender] = useState(true)
+
   useEffect(() => {
-    Aos.init({})
+    setRender(!isNotRender)
   }, [])
 
   const clickHandle = () => {
@@ -67,25 +67,27 @@ const Content = ({
         <ContentWrapper>
           <ContentRow imgStart={imgStart}>
             <Column1 imgStart={imgStart}>
-              <TextComponent
-                presentation={presentation}
-                topLine={topLine}
-                topLineAnim={topLineAnim}
-                topLineAnimTime={topLineAnimTime}
-                headline={headline}
-                headlineAnim={headlineAnim}
-                headlineAnimTime={headlineAnimTime}
-                headlineDelay={headlineDelay}
-                subtitle={subtitle}
-                subtitleAnim={subtitleAnim}
-                subtitleAnimTime={subtitleAnimTime}
-                subtitleDelay={subtitleDelay}
-                buttonLabel={buttonLabel}
-                buttonAnim={buttonAnim}
-                buttonAnimTime={buttonAnimTime}
-                buttonColor={buttonColor}
-                clickHandle={clickHandle}
-              />
+              {isNotRender ? null : (
+                <TextComponent
+                  presentation={presentation}
+                  topLine={topLine}
+                  topLineAnim={topLineAnim}
+                  topLineAnimTime={topLineAnimTime}
+                  headline={headline}
+                  headlineAnim={headlineAnim}
+                  headlineAnimTime={headlineAnimTime}
+                  headlineDelay={headlineDelay}
+                  subtitle={subtitle}
+                  subtitleAnim={subtitleAnim}
+                  subtitleAnimTime={subtitleAnimTime}
+                  subtitleDelay={subtitleDelay}
+                  buttonLabel={buttonLabel}
+                  buttonAnim={buttonAnim}
+                  buttonAnimTime={buttonAnimTime}
+                  buttonColor={buttonColor}
+                  clickHandle={clickHandle}
+                />
+              )}
             </Column1>
             <Column2 imgStart={imgStart} presentation={presentation}>
               <ImageComp
@@ -101,9 +103,11 @@ const Content = ({
             </Column2>
           </ContentRow>
         </ContentWrapper>
-        <When condition={presentation}>
-          <SvgComponent presentation={presentation} isDarkMode={isDarkMode} />
-        </When>
+        {isNotRender ? null : (
+          <When condition={presentation}>
+            <SvgComponent presentation={presentation} isDarkMode={isDarkMode} />
+          </When>
+        )}
       </ContentContainer>
     </>
   )
