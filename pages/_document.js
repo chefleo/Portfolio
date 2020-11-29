@@ -36,6 +36,15 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <title>ChefLeo</title>
+          <meta
+            name="description"
+            content="Hello, I'm Digiorgio Leonardo. I'm a web developer. View my work"
+          />
+          <meta
+            name="keywords"
+            content="HTML, CSS, JavaScript, React, Next.js"
+          />
+          <meta name="author" content="Digiorgio Leonardo Simone" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
