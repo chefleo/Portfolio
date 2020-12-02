@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           <meta name="author" content="Digiorgio Leonardo Simone" />
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          {/* <script
+          <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
@@ -59,8 +59,8 @@ export default class MyDocument extends Document {
             });
           `,
             }}
-          /> */}
-          <script
+          />
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -70,15 +70,15 @@ export default class MyDocument extends Document {
             })(window,document,'script','dataLayer','GTM-WTPZT4V');
           `,
             }}
-          />
+          /> */}
         </Head>
-        <body style={{ margin: 0 }}>
-          <noscript
+        <body>
+          {/* <noscript
             dangerouslySetInnerHTML={{
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTPZT4V"
         height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
             }}
-          />
+          /> */}
           <Main />
           <NextScript />
         </body>
