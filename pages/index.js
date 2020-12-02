@@ -15,11 +15,18 @@ import Content from '../src/components/Content'
 import Sidebar from '../src/components/Sidebar'
 import Footer from '../src/components/Footer'
 
+// import ReactGA from 'react-ga'
+
 export default function Home() {
   const [useDarkTheme, setUseDarkTheme] = useState(true)
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [isOpen, setisOpen] = useState(false)
   const [isNotRender, setRender] = useState(true)
+
+  // useEffect(() => {
+  //   ReactGA.initialize('G-3FTMDK2TBC')
+  //   ReactGA.pageview(window.location.pathname + window.location.search)
+  // }, [])
 
   useEffect(() => {
     setRender(!isNotRender)

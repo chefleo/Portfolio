@@ -48,14 +48,11 @@ export const ContentRow = styled.div`
     width: 100%;
   }
 `
-// ${({ imgStart }) =>
-//       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
 
 export const Column1 = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  /* margin: ${({ imgStart }) => (imgStart ? '0 0 0 40px' : '0 40px 0 0')}; */
 
   grid-area: col1;
 
@@ -70,10 +67,7 @@ export const Column1 = styled.div`
 
 export const Column2 = styled.div`
   /* background: green; */
-  /* height: inherit; */
   width: 100%;
-  /* height: 100%; */
-  /* margin: ${({ imgStart }) => (imgStart ? '0 40px 0 0' : '0 0 0 40px')}; */
   margin-bottom: 15px;
   margin-top: 25px;
   padding: 0 15px;
@@ -85,8 +79,6 @@ export const Column2 = styled.div`
   @media screen and (max-width: 850px) {
     justify-content: center;
     align-items: center;
-    /* height: 75%; */
-    /* max-height: 300px; */
   }
 `
 
@@ -95,19 +87,11 @@ export const ImgWrap = styled.div`
   height: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
-  /* @media screen and (max-width: 480px) {
-    padding: 10px;
-  } */
 `
 
 export const ImageComp = styled(Image)`
-  /* height: 100%;
-  width: auto; */
   margin: 0 0 10px 0;
   padding-right: 0;
   border-radius: ${({ presentation }) => (presentation ? '50%' : '0px')};
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.529);
-  /* @media screen and (max-width: 768px) {
-    margin: 0;
-  } */
 `
