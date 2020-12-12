@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { slideRight } from '../../Animation'
 
 export const TitleContainer = styled.div`
   display: ${({ title }) => (title ? 'flex' : 'none')};
@@ -8,6 +9,7 @@ export const TitleContainer = styled.div`
   margin: 0;
   background: ${(props) => props.theme.contentTitle};
   width: 100%;
+  height: 90px;
 `
 
 export const Title = styled.h1`
@@ -20,4 +22,9 @@ export const Title = styled.h1`
   color: ${(props) => ({ isDarkMode }) =>
     isDarkMode ? props.theme.textColor : props.theme.navTextColor};
   text-transform: uppercase;
+
+  animation-name: ${slideRight};
+  animation-duration: 2.6s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-fill-mode: both;
 `

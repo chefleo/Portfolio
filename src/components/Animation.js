@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import { keyframes } from 'styled-components'
 
 export const slideRight = keyframes`
   0% {
@@ -26,10 +26,10 @@ export const slideLeft = keyframes`
   }
 `
 
-export const slideBottom = keyframes`
+export const slideUp = keyframes`
     0% {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
             opacity: 0.0
   }
   100% {
@@ -37,4 +37,13 @@ export const slideBottom = keyframes`
             transform: translateY(0px);
             opacity: 1.0
   }
+`
+
+export const fade = keyframes`
+0% {
+    opacity: 0.0
+}
+100% {
+    opacity: 1.0
+}
 `

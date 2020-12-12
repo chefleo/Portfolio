@@ -4,29 +4,29 @@ export const presentation = {
   imgStart: false,
   imgWidth: '300',
   imgHeight: '300',
-  ImageAnim: '',
-  ImageAnimTime: '',
+  // ImageAnim: 'slideUp',
+  // ImageAnimTime: '2.6s',
 
   // Title
-  titleAnim: 'fade-right',
+  titleAnim: 'slideRight',
   titleAnimTime: '',
 
   //TopLine
   topLine: '',
-  topLineAnim: 'fade-right',
+  topLineAnim: 'slideRight',
   topLineAnimTime: '',
 
   //Headline
   headline: 'Digiorgio Leonardo Simone',
   headlineAnim: 'fade',
-  headlineAnimTime: '2500',
-  headlineDelay: '800',
+  // headlineAnimTime: '5s',
+  // headlineDelay: '0.5s',
 
   //Subtitle
   subtitle: 'Web developer',
   subtitleAnim: 'fade',
-  subtitleAnimTime: '2000',
-  subtitleDelay: '500',
+  // subtitleAnimTime: '5s',
+  // subtitleDelay: '1s',
 
   alternativeColor: false,
 }
@@ -37,34 +37,34 @@ export const Portfolio = {
   imgStart: true,
   imgWidth: '500',
   imgHeight: '281',
-  ImageAnim: 'fade-up',
-  ImageAnimTime: '2000',
+  ImageAnim: 'slideUp',
+  ImageAnimTime: '2s',
 
   // Title
-  titleAnim: 'fade-right',
-  titleAnimTime: '2000',
+  titleAnim: 'slideRight',
+  titleAnimTime: '3s',
 
   //TopLine
   topLine: 'React / Next.js',
-  topLineAnim: 'fade-right',
-  topLineAnimTime: '2000',
+  topLineAnim: 'slideRight',
+  topLineAnimTime: '3s',
 
   //HeadLine
   headline: 'Portfolio',
-  headlineAnim: 'fade-left',
-  headlineAnimTime: '1500',
-  headlineDelay: '1000',
+  headlineAnim: 'slideLeft',
+  headlineAnimTime: '2s',
+  headlineDelay: '1s',
 
   //SubTitle
   subtitle: 'Portfoglio created with react and next.js',
   subtitleAnim: 'fade',
-  subtitleAnimTime: '2000',
-  subtitleDelay: '500',
+  subtitleAnimTime: '3s',
+  subtitleDelay: '2s',
 
   //Button
   buttonLabel: 'View Code',
-  buttonAnim: 'flip-right',
-  buttonAnimTime: '2000',
+  buttonAnim: 'slideUp',
+  buttonAnimTime: '4s',
   buttonColor: 'white',
   url: 'https://github.com/chefleo/Portfolio.git',
 
@@ -77,33 +77,34 @@ export const Starchef = {
   imgStart: false,
   imgWidth: '500',
   imgHeight: '281',
-  ImageAnim: 'fade-up',
-  ImageAnimTime: '2000',
+  ImageAnim: 'slideUp',
+  ImageAnimTime: '2s',
 
   // Title
-  titleAnim: 'fade-right',
-  titleAnimTime: '2000',
+  titleAnim: 'slideRight',
+  titleAnimTime: '2s',
 
   //TopLine
   topLine: 'MongoDB / Express / Angular / Nodejs',
-  topLineAnim: 'fade-right',
-  topLineAnimTime: '2000',
+  topLineAnim: 'slideRight',
+  topLineAnimTime: '3s',
 
   //Headline
   headline: 'StarChef',
-  headlineAnim: 'fade-left',
-  headlineAnimTime: '1500',
+  headlineAnim: 'slideLeft',
+  headlineAnimTime: '2s',
+  headlineDelay: '1s',
 
   //Subtitle
   subtitle: 'An ecommerce about the kitchen world',
   subtitleAnim: 'fade',
-  subtitleAnimTime: '2000',
-  subtitleDelay: '500',
+  subtitleAnimTime: '3s',
+  subtitleDelay: '2s',
 
   //Button
   buttonLabel: 'View Code',
-  buttonAnim: 'flip-right',
-  buttonAnimTime: '2000',
+  buttonAnim: 'slideUp',
+  buttonAnimTime: '4s',
   buttonColor: 'white',
   url: 'https://github.com/chefleo/StarChef',
 
@@ -116,33 +117,34 @@ export const Libra = {
   imgStart: false,
   imgWidth: '300',
   imgHeight: '300',
-  ImageAnim: 'fade-up',
-  ImageAnimTime: '2000',
+  ImageAnim: 'slideUp',
+  ImageAnimTime: '2s',
 
   // Title
-  titleAnim: 'fade-right',
-  titleAnimTime: '2000',
+  titleAnim: 'slideRight',
+  titleAnimTime: '3s',
 
   //TopLine
   topLine: 'Cryptocurrency',
-  topLineAnim: 'fade-right',
-  topLineAnimTime: '2000',
+  topLineAnim: 'slideRight',
+  topLineAnimTime: '3s',
 
   //Headline
   headline: 'Libra',
-  headlineAnim: 'fade-left',
-  headlineAnimTime: '1500',
+  headlineAnim: 'slideLeft',
+  headlineAnimTime: '2s',
+  headlineDelay: '1s',
 
   //Subtitle
   subtitle: 'Thesis on Libra cryptocurrency (Italian)',
   subtitleAnim: 'fade',
-  subtitleAnimTime: '2000',
-  subtitleDelay: '500',
+  subtitleAnimTime: '3s',
+  subtitleDelay: '2s',
 
   //Button
   buttonLabel: 'View Article',
-  buttonAnim: 'flip-right',
-  buttonAnimTime: '2000',
+  buttonAnim: 'slideUp',
+  buttonAnimTime: '4s',
   buttonColor: 'white',
   url:
     'https://medium.com/@simon.digiorgio/la-blockchain-di-libra-e8b1e243fcbd',

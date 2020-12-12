@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { slideRight, slideBottom, slideLeft } from '../Animation'
+import { slideRight, slideLeft, slideUp } from '../Animation'
+
 import Image from 'next/image'
 
 export const ContentContainer = styled.div`
@@ -94,4 +95,14 @@ export const ImageComp = styled(Image)`
   padding-right: 0;
   border-radius: ${({ presentation }) => (presentation ? '50%' : '0px')};
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.529);
+
+  animation-name: ${({ ImageAnim }) => {
+    if (ImageAnim === 'slideUp') return slideUp
+    if (ImageAnim === 'slideRight') return slideRight
+    if (ImageAnim === 'slideLeft') return slideLeft
+  }};
+  animation-duration: ${({ ImageAnimTime }) =>
+    ImageAnimTime ? ImageAnimTime : ''};
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-fill-mode: both;
 `

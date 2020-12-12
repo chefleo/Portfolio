@@ -32,29 +32,29 @@ const TextComponent = ({
     <>
       <TextWrapper>
         <When condition={!presentation}>
-          <TopLine data-aos={topLineAnim} data-aos-duration={topLineAnimTime}>
+          <TopLine topLineAnim={topLineAnim} topLineAnimTime={topLineAnimTime}>
             {topLine}
           </TopLine>
         </When>
         <Heading
-          data-aos={headlineAnim}
-          data-aos-duration={headlineAnimTime}
-          data-aos-delay={headlineDelay}
+          headlineAnim={headlineAnim}
+          headlineAnimTime={headlineAnimTime}
+          headlineDelay={headlineDelay}
         >
           {headline}
         </Heading>
         <Subtitle
-          data-aos={subtitleAnim}
-          data-aos-duration={subtitleAnimTime}
-          data-aos-delay={subtitleDelay}
+          subtitleAnim={subtitleAnim}
+          subtitleAnimTime={subtitleAnimTime}
+          subtitleDelay={subtitleDelay}
         >
           {subtitle}
         </Subtitle>
         <When condition={!presentation}>
           <BtnWrap
             presentation={presentation}
-            data-aos={buttonAnim}
-            data-aos-duration={buttonAnimTime}
+            buttonAnim={buttonAnim}
+            buttonAnimTime={buttonAnimTime}
           >
             <Button buttonColor={buttonColor} onClick={clickHandle}>
               {buttonLabel}
