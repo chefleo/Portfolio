@@ -13,12 +13,14 @@ export const ContentContainer = styled.div`
   z-index: 0;
   width: 100%;
   overflow-x: hidden;
+  /* height: ${({ presentation }) => (presentation ? '100vh' : '')}; */
 `
 
 export const ContentWrapper = styled.div`
   /* background: red; */
   display: flex;
   z-index: 1;
+  /* height: ${({ presentation }) => (presentation ? '100vh' : '710px')}; */
   height: 710px;
   width: 100%;
   max-width: 1100px;

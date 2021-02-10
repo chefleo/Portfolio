@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { When } from 'react-if'
 import TitleComponent from './Title/index'
 import TextComponent from './TextCol/index'
@@ -85,7 +86,10 @@ const Content = ({
 
   return (
     <>
-      <ContentContainer alternativeColor={alternativeColor}>
+      <ContentContainer
+        alternativeColor={alternativeColor}
+        presentation={presentation}
+      >
         {title ? (
           <TitleComponent
             title={title}
@@ -97,7 +101,7 @@ const Content = ({
           ''
         )}
 
-        <ContentWrapper>
+        <ContentWrapper presentation={presentation}>
           <ContentRow imgStart={imgStart}>
             <Column1 imgStart={imgStart} ref={columnRef}>
               {isNotRender ? null : (
@@ -145,11 +149,10 @@ const Content = ({
             </Column2>
           </ContentRow>
         </ContentWrapper>
-        {isNotRender ? null : (
-          <When condition={presentation}>
-            <SvgComponent presentation={presentation} isDarkMode={isDarkMode} />
-          </When>
-        )}
+
+        <When condition={presentation}>
+          <SvgComponent presentation={presentation} isDarkMode={isDarkMode} />
+        </When>
       </ContentContainer>
     </>
   )

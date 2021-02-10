@@ -8,10 +8,38 @@ import {
   Libra,
 } from '../src/components/Content/data'
 
+import dynamic from 'next/dynamic'
+
 import Navbar from '../src/components/Navbar'
+// const Navbar = dynamic(
+//   () => {
+//     return import('../src/components/Navbar')
+//   },
+//   { ssr: false }
+// )
 import Content from '../src/components/Content'
-import Sidebar from '../src/components/Sidebar'
-import Footer from '../src/components/Footer'
+const ContentDynamic = dynamic(
+  () => {
+    return import('../src/components/Content')
+  },
+  { ssr: false }
+)
+// import Sidebar from '../src/components/Sidebar'
+const Sidebar = dynamic(
+  () => {
+    return import('../src/components/Sidebar')
+  },
+  { ssr: false }
+)
+
+// import Footer from '../src/components/Footer'
+
+const Footer = dynamic(
+  () => {
+    return import('../src/components/Footer')
+  },
+  { ssr: false }
+)
 
 // import ReactGA from 'react-ga'
 
@@ -49,22 +77,19 @@ export default function Home() {
           isDarkMode={isDarkMode}
           {...presentation}
         />
-        {isNotRender ? null : (
-          <section id="projects">
-            <Content title="Projects" {...Portfolio} />
-            <Content {...Starchef} />
-          </section>
-        )}
-        {isNotRender ? null : (
-          <section id="articles">
-            <Content title="Articles" {...Libra} />
-          </section>
-        )}
-        {isNotRender ? null : (
-          <section id="social">
-            <Footer id="social" />
-          </section>
-        )}
+
+        <section id="projects">
+          <ContentDynamic title="Projects" {...Portfolio} />
+          <ContentDynamic {...Starchef} />
+        </section>
+
+        <section id="articles">
+          <ContentDynamic title="Articles" {...Libra} />
+        </section>
+
+        <section id="social">
+          <Footer id="social" />
+        </section>
       </ThemeProvider>
     </>
   )
