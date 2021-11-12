@@ -1,96 +1,79 @@
-import React, { useState, useEffect } from 'react'
-import { ThemeProvider } from 'styled-components'
-import { darkTheme, lightTheme } from '../src/theme/theme'
-import {
-  presentation,
-  Portfolio,
-  Starchef,
-  Libra,
-} from '../src/components/Content/data'
+import React, { useState } from 'react'
 
-import dynamic from 'next/dynamic'
-
-import Navbar from '../src/components/Navbar'
-// const Navbar = dynamic(
-//   () => {
-//     return import('../src/components/Navbar')
-//   },
-//   { ssr: false }
-// )
 import Content from '../src/components/Content'
-const ContentDynamic = dynamic(
-  () => {
-    return import('../src/components/Content')
-  },
-  { ssr: false }
-)
-// import Sidebar from '../src/components/Sidebar'
-const Sidebar = dynamic(
-  () => {
-    return import('../src/components/Sidebar')
-  },
-  { ssr: false }
-)
-
-// import Footer from '../src/components/Footer'
-
-const Footer = dynamic(
-  () => {
-    return import('../src/components/Footer')
-  },
-  { ssr: false }
-)
+import CardChoices from '../src/components/CardChoices'
+import Presentation from '../src/components/Presentation'
 
 // import ReactGA from 'react-ga'
+import { dataProjects, dataArticles } from '../src/components/data'
+
+import { Link } from 'react-scroll'
+import Footer from '../src/components/Footer'
 
 export default function Home() {
-  const [useDarkTheme, setUseDarkTheme] = useState(true)
-  const [isDarkMode, setIsDarkMode] = useState(true)
-  const [isOpen, setisOpen] = useState(false)
-  const [isNotRender, setRender] = useState(true)
+  const [showDataProjects, setShowDataProjects] = useState(false)
+  const [showDataArticles, setShowDataArticles] = useState(false)
+  const [type, setType] = useState('')
 
-  // useEffect(() => {
-  //   ReactGA.initialize('G-3FTMDK2TBC')
-  //   ReactGA.pageview(window.location.pathname + window.location.search)
-  // }, [])
-
-  useEffect(() => {
-    setRender(!isNotRender)
-  }, [])
-
-  const toggle = () => {
-    setUseDarkTheme(!useDarkTheme)
-    setIsDarkMode(!isDarkMode)
-  }
-
-  const open = () => {
-    setisOpen(!isOpen)
+  const choises = (choise) => {
+    if (choise === 'Projects') {
+      if (!!showDataProjects) {
+        setShowDataProjects(false)
+        setType('')
+      } else {
+        setShowDataArticles(false)
+        setType('Projects')
+        setShowDataProjects(true)
+      }
+    }
+    if (choise === 'Articles') {
+      if (!!showDataArticles) {
+        setShowDataArticles(false)
+        setType('')
+      } else {
+        setShowDataProjects(false)
+        setType('Articles')
+        setShowDataArticles(true)
+      }
+    }
   }
 
   return (
     <>
-      <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
-        {isNotRender ? null : <Sidebar isOpen={isOpen} toggle={open} />}
-        <Navbar toggle={toggle} open={open} isDarkMode={isDarkMode} />
-        <Content
-          presentation="true"
-          isDarkMode={isDarkMode}
-          {...presentation}
-        />
+      <div className="overflow-hidden">
+        <Presentation />
+        <Link to="content" spy={true} smooth={true}>
+          <CardChoices choises={choises} />
+        </Link>
+        <div id="content">
+          <div className="relative z-10 max-w-screen-2xl mx-auto bg-contentColorAlternative pt-20">
+            {/* Svg Arrow */}
+            <div className="absolute z-0 top-0 left-0 w-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+                className="h-96 w-full fill-current text-contentColor"
+              >
+                <rect x="1200" height="3.6"></rect>
+                <rect height="3.6"></rect>
+                <path
+                  d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z"
+                  class="shape-fill"
+                ></path>
+              </svg>
+            </div>
 
-        <section id="projects">
-          <ContentDynamic title="Projects" {...Portfolio} />
-          <ContentDynamic {...Starchef} />
-        </section>
+            {/* Projects */}
+            {showDataProjects && <Content data={dataProjects} type={type} />}
 
-        <section id="articles">
-          <ContentDynamic title="Articles" {...Libra} />
-        </section>
+            {/* Articles */}
+            {showDataArticles && <Content data={dataArticles} type={type} />}
+          </div>
+        </div>
+      </div>
 
-        <section id="social">
-          <Footer id="social" />
-        </section>
-      </ThemeProvider>
+      <Footer />
     </>
   )
 }

@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+// import '../styles/globals.css'
+import 'tailwindcss/tailwind.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
