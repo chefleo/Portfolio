@@ -1,6 +1,26 @@
 export const dataProjects = [
   {
+    id: '8',
+    title: 'Spotify-clone',
+    img: '/Spotify.png',
+    languageUsed:
+      'React / Nextjs / Tailwind / Vercel / HeroIcon / Recoil / Spotify Web Api',
+    description: 'Recreated the UI of Spotify using React',
+    btnLiveDemoUrl: 'https://spotify-next-clone-chefleo.vercel.app/login',
+    btnCodeUrl: 'https://github.com/chefleo/spotify-next-clone',
+  },
+  {
     id: '7',
+    title: 'Amazon-clone',
+    img: '/Amazon.png',
+    languageUsed: 'React / Nextjs / Tailwind / Vercel / Stripe',
+    description:
+      'Recreated the UI of Amazon using React and using Stripe checkout',
+    btnLiveDemoUrl: 'https://amazon-clone-git-main-chefleo.vercel.app/',
+    btnCodeUrl: 'https://github.com/chefleo/amazon-clone',
+  },
+  {
+    id: '6',
     title: 'Instagram-clone',
     img: '/Instagram.png',
     languageUsed: 'React / Nextjs / Tailwind / Vercel ',
@@ -9,7 +29,7 @@ export const dataProjects = [
     btnCodeUrl: 'https://github.com/chefleo/instagram-clone',
   },
   {
-    id: '6',
+    id: '5',
     title: 'Airbnb-clone',
     img: '/Airbnb.png',
     languageUsed: 'React / Nextjs / Mapbox / Flexbox / Tailwind / Vercel ',
@@ -18,7 +38,7 @@ export const dataProjects = [
     btnCodeUrl: 'https://github.com/chefleo/airbnb-clone',
   },
   {
-    id: '5',
+    id: '4',
     title: 'Slack-clone',
     img: '/slack.png',
     languageUsed:
@@ -26,14 +46,6 @@ export const dataProjects = [
     description: 'Recreated the UI of Slack using React',
     btnLiveDemoUrl: 'https://slack-clone-edaa0.web.app/',
     btnCodeUrl: 'https://github.com/chefleo/slack-clone',
-  },
-  {
-    id: '4',
-    title: 'Spotify-clone',
-    img: '/Spotify.png',
-    languageUsed: 'React / Material UI / Reducer / Spotify Web Api',
-    description: 'Recreated the UI of Spotify using React',
-    btnCodeUrl: 'https://github.com/chefleo/spotify-clone',
   },
   {
     id: '3',
