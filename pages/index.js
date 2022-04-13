@@ -46,7 +46,7 @@ export default function Home() {
           <CardChoices choises={choises} />
         </Link>
         <div id="content">
-          <div className="relative z-10 max-w-screen-2xl mx-auto bg-contentColorAlternative pt-20">
+          <div className="relative z-10 mx-auto bg-contentColorAlternative pt-20">
             {/* Svg Arrow */}
             <div className="absolute z-0 top-0 left-0 w-full">
               <svg
