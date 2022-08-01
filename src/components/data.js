@@ -1,5 +1,15 @@
 export const dataProjects = [
   {
+    id: '10',
+    title: 'Trieste-Venice NFT Collection',
+    img: '/Trieste.png',
+    languageUsed: 'Solidity / Remix',
+    description:
+      'An awesome NFT Collection of photos about Trieste and Venice using Solidity!',
+    btnLiveDemoUrl: 'https://testnets.opensea.io/collection/italy-trieste',
+    btnCodeUrl: 'https://github.com/chefleo/Trieste_Venice_NFT_Collection',
+  },
+  {
     id: '9',
     title: 'Hulu-clone',
     img: '/Hulu.png',
