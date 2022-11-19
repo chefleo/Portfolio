@@ -6,7 +6,7 @@ export const dataProjects = [
     languageUsed: 'Solidity / Remix',
     description:
       'An awesome NFT Collection of photos about Trieste and Venice using Solidity!',
-    btnLiveDemoUrl: 'https://testnets.opensea.io/collection/italy-trieste',
+    btnLiveDemoUrl: 'https://testnets.opensea.io/collection/italytrieste',
     btnCodeUrl: 'https://github.com/chefleo/Trieste_Venice_NFT_Collection',
   },
   {
