@@ -18,7 +18,7 @@ function Presentation() {
             DIGIORGIO LEONARDO SIMONE
           </h3>
           <p className="mb-2 mt-3 text-sm sm:text-md md:text-lg lg:text-xl font-medium text-white">
-            Web Developer
+            Web3 Developer
           </p>
         </div>
       </div>

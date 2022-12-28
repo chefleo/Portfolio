@@ -1,5 +1,16 @@
 export const dataProjects = [
   {
+    id: '11',
+    title: 'BuyMeACoffee (Testnet Goerli)',
+    img: '/buymeacoffee.png',
+    languageUsed: 'Solidity / Hardhat / Alchemy',
+    description:
+      'A decentralized application (DApp) built with Hardhat and Solidity. Deployed on the Goerli testnet.',
+    btnLiveDemoUrl:
+      'https://buymeacoffee-solidity-defi-tipping-app.chefleo.repl.co/',
+    btnCodeUrl: 'https://github.com/chefleo/BuyMeACoffee_smart_contract',
+  },
+  {
     id: '10',
     title: 'Trieste-Venice NFT Collection',
     img: '/Trieste.png',
