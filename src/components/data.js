@@ -1,5 +1,15 @@
 export const dataProjects = [
   {
+    id: '12',
+    title: 'NFT Gallery',
+    img: '/NFTGallery.png',
+    languageUsed: 'Next.js / Tailwind / Alchemy',
+    description:
+      'A NFT Gallery using React, Next.js and the Alchemy NFT API for fetching NFTs from the blockchain in milliseconds, not weeks.',
+    btnLiveDemoUrl: 'https://nft-gallery-three-chi.vercel.app/',
+    btnCodeUrl: 'https://github.com/chefleo/Nft_gallery',
+  },
+  {
     id: '11',
     title: 'BuyMeACoffee (Testnet Goerli)',
     img: '/buymeacoffee.png',
