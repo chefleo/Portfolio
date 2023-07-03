@@ -17,16 +17,16 @@ function CardContent({
       </h2>
 
       {/* Image */}
-      <Image height={200} width={200} objectFit="contain" src={img} alt="" />
+      <Image height={720} width={1280} objectFit="contain" src={img} alt="" />
 
       <div className="my-4">
         {/* Language Used */}
-        <p className="text-green-500 font-medium text-center text-md line-clamp-2 my-2">
+        <p className="text-green-500 font-medium text-center text-xl line-clamp-2 my-2">
           {languageUsed}
         </p>
 
         {/* Description */}
-        <p className="text-white font-normale text-center text-sm line-clamp-2 my-2">
+        <p className="text-white font-normale text-center text-xl line-clamp-2 my-2">
           {description}
         </p>
       </div>
@@ -42,7 +42,7 @@ function CardContent({
         </a>
       )}
       <a
-        className="text-center text-gray-900 text-lg font-semibold mb-4 mt-auto p-2 bg-buttonColor  rounded-lg cursor-pointer hover:scale-105 transform transition duration-300 ease-out"
+        className="text-center text-gray-900 text-lg font-semibold mb-4 mt-1 p-2 bg-buttonColor  rounded-lg cursor-pointer hover:scale-105 transform transition duration-300 ease-out"
         target="_blank"
         href={btnCodeUrl}
         rel="noopener noreferrer"

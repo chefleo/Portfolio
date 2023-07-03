@@ -3,7 +3,7 @@ import CardContent from './CardContent'
 
 function Content({ data, type }) {
   return (
-    <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 pb-8">
+    <div className="grid grid-flow-row-dense lg:grid-cols-1 xl:grid-cols-2 pb-8">
       {data.map(
         ({
           id,

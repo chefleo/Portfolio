@@ -1,5 +1,26 @@
 export const dataProjects = [
   {
+    id: '14',
+    title:
+      'FNS - Flare Name Service (Associated with Elevate Software Development)',
+    img: '/FNS.png',
+    languageUsed: 'Next.js / Wagmi / Ethers.js',
+    description: `Built a responsive and user-friendly front-end project using the powerful combination of Next.js framework and React. Leveraging the capabilities of Next.js and React, I created a dynamic and interactive user interface that adapts to different screen sizes and devices. By utilizing the flexibility and component-based approach of React, I developed reusable UI components, ensuring consistency and efficiency throughout the project.In the end I integrated Wagmi hook to connect the front-end with blockchain smart contracts.`,
+    btnLiveDemoUrl: 'https://app.flrns.domains/',
+    btnCodeUrl: 'https://github.com/flaredomains',
+  },
+  {
+    id: '13',
+    title: 'GOGE (Associated with Elevate Software Development)',
+    img: '/GOGE.png',
+    languageUsed: 'Next.js / Wagmi / Ethers.js',
+    description: `The GOGE DAO is a Decentralized Anonymous Organization that is managed by $GOGE token holders.Built a responsive and user-friendly front-end project using Next.js framework and React.
+    Integrated Wagmi hook to establish connections with smart contracts.
+    Wrote the documentation to provide clear explanations of the connection between front-end and smart contracts (Wagmi) to enhance team understanding.`,
+    btnLiveDemoUrl: 'https://app.flrns.domains/',
+    btnCodeUrl: 'https://github.com/flaredomains',
+  },
+  {
     id: '12',
     title: 'NFT Gallery',
     img: '/NFTGallery.png',
@@ -116,6 +137,15 @@ export const dataProjects = [
 ]
 
 export const dataArticles = [
+  {
+    id: '4',
+    title: 'The Power of WalletConnect (Web3Modal) and Wagmi (Viem version)',
+    img: '/WalletConnectArticle.png',
+    languageUsed: 'WalletConnect / Wagmi / Viem / Smart Contract',
+    description: `Discover the power of WalletConnect and Wagmi in Web3 app development – seamless integration of blockchain wallets, simplified Ethereum development, and enhanced user experiences.`,
+    btnCodeUrl:
+      'https://medium.com/@simon-digiorgio/the-power-of-walletconnect-web3modal-and-wagmi-viem-version-d7bc94e8fee8',
+  },
   {
     id: '3',
     title: 'The Move language',
