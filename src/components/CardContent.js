@@ -41,14 +41,16 @@ function CardContent({
           Live Demo
         </a>
       )}
-      <a
-        className="text-center text-gray-900 text-lg font-semibold mb-4 mt-1 p-2 bg-buttonColor  rounded-lg cursor-pointer hover:scale-105 transform transition duration-300 ease-out"
-        target="_blank"
-        href={btnCodeUrl}
-        rel="noopener noreferrer"
-      >
-        {type === 'Projects' ? 'Code Github' : 'View Article'}
-      </a>
+      {btnCodeUrl && (
+        <a
+          className="text-center text-gray-900 text-lg font-semibold mb-4 mt-1 p-2 bg-buttonColor  rounded-lg cursor-pointer hover:scale-105 transform transition duration-300 ease-out"
+          target="_blank"
+          href={btnCodeUrl}
+          rel="noopener noreferrer"
+        >
+          {type === 'Projects' ? 'Code Github' : 'View Article'}
+        </a>
+      )}
     </div>
   )
 }

@@ -59,7 +59,7 @@ export default function Home() {
                 <rect height="3.6"></rect>
                 <path
                   d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z"
-                  class="shape-fill"
+                  className="shape-fill"
                 ></path>
               </svg>
             </div>

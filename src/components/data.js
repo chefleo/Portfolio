@@ -1,17 +1,43 @@
 export const dataProjects = [
   {
+    id: '17',
+    title: 'FlareLink - Page Builder',
+    img: '/Page_Builder.png',
+    languageUsed: 'Next.js / Wagmi / Viem / TypeScript',
+    description: `The feature "Page Builder" on FlareLink is a revolutionary tool that empowers users to create their own personalized websites, utilizing their domain, within the Flare blockchain ecosystem and making use of Flare cryptocurrency. My duties encompass various technical aspects, including enhancing the user interface and experience (UI/UX), establishing Smart Contract connections through Wagmi Viem, and facilitating the transition from Wagmi Ethers to Wagmi Viem. This role involves a blend of technical expertise and a focus on user accessibility and blockchain integration to bring this innovative project to life.`,
+    btnLiveDemoUrl: 'https://app.flr.link/',
+    btnCodeUrl: 'https://github.com/flaredomains',
+  },
+  {
+    id: '16',
+    title: 'APX Medical',
+    img: '/APX.png',
+    languageUsed: 'Astro / Tailwind CSS',
+    description: `Developed a Single Page Application (SPA) medical website using Astro, a cutting-edge web development framework. 
+    Astro's performance optimization capabilities have allowed us to create a lightning-fast user experience.
+    The website offers a user-friendly interface that enables patients to easily schedule appointments.`,
+    btnLiveDemoUrl: 'https://apex-medical.pages.dev/',
+  },
+  {
+    id: '15',
+    title: 'REV3AL: Security Portal “R3AL ID” (Prototype - Demo Product)',
+    img: '/Reveal.png',
+    languageUsed: 'Vite / Tailwind CSS / React.js',
+    description: `Developed the UI and UX using Vite and implemented resemblejs that analyse and compare images which in this demo product (in the Verify section), the user can not reuploads the same or similar photo.`,
+    btnLiveDemoUrl: 'https://watermarkdemo.rev3al.com/',
+  },
+  {
     id: '14',
-    title:
-      'FNS - Flare Name Service (Associated with Elevate Software Development)',
+    title: 'FNS - Flare Name Service (Now FlareLink)',
     img: '/FNS.png',
     languageUsed: 'Next.js / Wagmi / Ethers.js',
     description: `Built a responsive and user-friendly front-end project using the powerful combination of Next.js framework and React. Leveraging the capabilities of Next.js and React, I created a dynamic and interactive user interface that adapts to different screen sizes and devices. By utilizing the flexibility and component-based approach of React, I developed reusable UI components, ensuring consistency and efficiency throughout the project.In the end I integrated Wagmi hook to connect the front-end with blockchain smart contracts.`,
-    btnLiveDemoUrl: 'https://app.flrns.domains/',
+    btnLiveDemoUrl: 'https://app.flr.link/',
     btnCodeUrl: 'https://github.com/flaredomains',
   },
   {
     id: '13',
-    title: 'GOGE (Associated with Elevate Software Development)',
+    title: 'GOGE',
     img: '/GOGE.png',
     languageUsed: 'Next.js / Wagmi / Ethers.js',
     description: `The GOGE DAO is a Decentralized Anonymous Organization that is managed by $GOGE token holders.Built a responsive and user-friendly front-end project using Next.js framework and React.

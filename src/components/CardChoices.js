@@ -37,8 +37,13 @@ function CardChoices({ choises }) {
   return (
     <section className="bg-contentColor -my-1">
       <div className="flex flex-wrap items-center justify-around px-8 py-8 md:px-20 md:py-20">
-        {choiseCard.map((item) => (
-          <Card choises={choises} image={item.image} text={item.text} />
+        {choiseCard.map((item, index) => (
+          <Card
+            key={index}
+            choises={choises}
+            image={item.image}
+            text={item.text}
+          />
         ))}
       </div>
     </section>

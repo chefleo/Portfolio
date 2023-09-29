@@ -35,17 +35,12 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>ChefLeo - Leonardo Digiorgio</title>
           <meta
             name="description"
             content="Hello, I'm Digiorgio Leonardo. I'm a web developer. View my work"
           />
           <meta name="author" content="Digiorgio Leonardo Simone" />
-          <link
-            rel="shortcut icon"
-            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/whatsapp/273/man-cook_1f468-200d-1f373.png
-"
-          />
+          <link rel="icon" href="./favicon2.ico" />
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
