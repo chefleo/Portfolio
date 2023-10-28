@@ -58,13 +58,14 @@ export const dataProjects = [
   },
   {
     id: '11',
-    title: 'BuyMeACoffee (Testnet Goerli)',
+    title: 'BuyMeACoffee (Base Goerli)',
     img: '/buymeacoffee.png',
-    languageUsed: 'Solidity / Hardhat / Alchemy',
+    languageUsed:
+      'Solidity / Hardhat / Alchemy / CoinbaseWallet / WalletConnect / Wagmi ',
     description:
-      'A decentralized application (DApp) built with Hardhat and Solidity. Deployed on the Goerli testnet.',
+      'A decentralized application (DApp) built with Hardhat and Solidity. Deployed on the Base Goerli testnet.',
     btnLiveDemoUrl:
-      'https://buymeacoffee-solidity-defi-tipping-app.chefleo.repl.co/',
+      'https://buy-me-a-coffee-front-end-git-coinbasewallet-chefleo.vercel.app/',
     btnCodeUrl: 'https://github.com/chefleo/BuyMeACoffee_smart_contract',
   },
   {
